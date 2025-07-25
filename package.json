@@ -1,0 +1,15 @@
+{
+  "name": "mynotesync",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "both": "concurrently \"npm run start --prefix client\" \"npm run start --prefix api\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
