@@ -14,8 +14,8 @@ app.use(express.json());
 // Configure CORS
 app.use(
   cors({
-    // origin: ["http://localhost:3000"],
-    origin: [`${frontendurl}`],
+    origin: ["https://my-note-sync-faiz.vercel.app"],
+    // origin: [`${frontendurl}`],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
     credentials: true, // Allow credentials if needed
   })
