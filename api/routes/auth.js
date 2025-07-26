@@ -57,7 +57,7 @@ router.post(
       // Return the newly created user
       // res.json(user);
       success = true;
-      res.json({ success, authtoken });
+      res.status(200).json({ success, authtoken });
 
       // Catch errors and send a 500 status code
     } catch (error) {
@@ -113,7 +113,7 @@ router.post(
       const authtoken = jwt.sign(payload, process.env.JWT_SECRET);
       success = true;
       // Return the JWT token
-      res.json({ success, authtoken });
+      res.status(200).json({ success, authtoken });
     } catch (error) {
       console.error(error.message);
       res.status(500).send("Internal Server Error");
@@ -128,7 +128,7 @@ router.post("/getuser", fetchuser, async (req, res) => {
     userId = req.user.id;
     // Find the user by ID and exclude the password field
     const user = await User.findById(userId).select("-password");
-    res.send(user);
+    res.status(200).send(user);
   } catch (error) {
     console.error(error.message);
     res.status(500).send("Internal Server Error");

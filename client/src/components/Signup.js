@@ -24,6 +24,7 @@ const Signup = (props) => {
         email,
         password,
       }),
+      mode: 'cors',
     });
     const json = await response.json();
     console.log(json);

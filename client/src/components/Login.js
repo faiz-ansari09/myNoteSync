@@ -18,6 +18,7 @@ const Login = (props) => {
         email: credentials.email,
         password: credentials.password,
       }),
+      mode: 'cors',
     });
     const json = await response.json();
     console.log(json);
