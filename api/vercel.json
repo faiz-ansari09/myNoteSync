@@ -10,7 +10,7 @@
     {
       "src": "/api/(.*)",
       "headers": {
-        "Access-Control-Allow-Origin": "",
+        "Access-Control-Allow-Origin": "https://my-note-sync-faiz.vercel.app",
         "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
         "Access-Control-Allow-Credentials": "true"
       },
