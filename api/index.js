@@ -5,7 +5,7 @@ require("dotenv").config(); // Load environment variables from .env
 
 const app = express();
 const port = process.env.PORT || 5000;
-const frontendurl = process.env.FRONTEND_URL;
+// const frontendurl = process.env.FRONTEND_URL;
 
 // Middleware
 // app.use(cors());
