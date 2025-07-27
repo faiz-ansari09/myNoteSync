@@ -43,7 +43,10 @@ const About = () => {
 
       <div className="d-flex justify-content-center mt-5">
         <div className="me-3">
-          <button onClick={handleLogin} className="btn btn-outline-primary px-4 me-3">
+          <button
+            onClick={handleLogin}
+            className="btn btn-outline-primary px-4 me-3"
+          >
             Login
           </button>
         </div>

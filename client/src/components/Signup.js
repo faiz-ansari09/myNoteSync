@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Signup = (props) => {
-  const host = process.env.REACT_APP_BASE_URL;    //global initialization of variable
+  const host = process.env.REACT_APP_BASE_URL; //global initialization of variable
   const [credentials, setCredentials] = useState({
     name: "",
     email: "",
@@ -24,7 +24,7 @@ const Signup = (props) => {
         email,
         password,
       }),
-      mode: 'cors',
+      mode: "cors",
     });
     const json = await response.json();
     console.log(json);

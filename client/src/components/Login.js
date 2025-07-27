@@ -7,9 +7,9 @@ const Login = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const host = process.env.REACT_APP_BASE_URL;       // local initialization of variable
+    const host = process.env.REACT_APP_BASE_URL; // local initialization of variable
     const response = await fetch(`${host}/api/auth/login`, {
-    // const response = await fetch("http://localhost:5000/api/auth/login", {
+      // const response = await fetch("http://localhost:5000/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +18,7 @@ const Login = (props) => {
         email: credentials.email,
         password: credentials.password,
       }),
-      mode: 'cors',
+      mode: "cors",
     });
     const json = await response.json();
     console.log(json);
