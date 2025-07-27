@@ -9,9 +9,6 @@ const fetchuser = require("../middleware/fetchuser");
 
 const JWT_SECRET = process.env.JWT_SECRET; //  Use environment variable or default secret
 
-router.options('/createuser', (req, res) => {
-  res.sendStatus(200); // For preflight
-});
 
 // ROUTE 1: Create a User using: POST "/api/auth/createuser"   // No login required
 router.post(

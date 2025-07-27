@@ -5,7 +5,7 @@ require("dotenv").config(); // Load environment variables from .env
 
 const app = express();
 const port = process.env.PORT || 5000;
-// const frontendurl = process.env.FRONTEND_URL;
+const frontendurl = process.env.FRONTEND_URL;
 
 // Middleware
 // app.use(cors());
@@ -14,8 +14,8 @@ app.use(express.json());
 // Configure CORS
 app.use(
   cors({
-    origin: ["https://my-note-sync-faiz.vercel.app"],
-    // origin: [`${frontendurl}`],
+    // origin: ["https://my-note-sync-faiz.vercel.app"],
+    origin: [`${frontendurl}`],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
     credentials: true, // Allow credentials if needed
   })
