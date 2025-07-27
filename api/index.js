@@ -33,17 +33,17 @@ app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
 
 // Start Server
-app.listen(port, () => {
-  connectToMongo();
-  console.log(`myNoteSync backend listening at http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   connectToMongo();
+//   console.log(`myNoteSync backend listening at http://localhost:${port}`);
+// });
 
 // Vercel serverless function export
-// let isConnected = false;
-// module.exports = async (req, res) => {
-//   if (!isConnected) {
-//     await connectToMongo();
-//     isConnected = true;
-//   }
-//   app(req, res);
-// };
+let isConnected = false;
+module.exports = async (req, res) => {
+  if (!isConnected) {
+    await connectToMongo();
+    isConnected = true;
+  }
+  app(req, res);
+};
