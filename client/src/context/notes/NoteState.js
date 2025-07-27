@@ -51,7 +51,7 @@ const NoteState = (props) => {
       },
       mode: 'cors',
     });
-    const json = response.json();
+    const json = await response.json();
     console.log(json);
 
     const newNotes = notes.filter((note) => {

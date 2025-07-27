@@ -22,7 +22,7 @@ app.use(
 );
 
 // Handle preflight requests
-app.options("*", cors());
+// app.options("*", cors());
 
 app.get("/", (req, res) => {
   res.send("<h1>Welcome to myNoteSync</h1>");
@@ -37,3 +37,13 @@ app.listen(port, () => {
   connectToMongo();
   console.log(`myNoteSync backend listening at http://localhost:${port}`);
 });
+
+// Vercel serverless function export
+// let isConnected = false;
+// module.exports = async (req, res) => {
+//   if (!isConnected) {
+//     await connectToMongo();
+//     isConnected = true;
+//   }
+//   app(req, res);
+// };
