@@ -6,10 +6,10 @@ myNoteSync is a simple note synchronization tool designed to keep your notes con
 
 ## Features
 
-- Synchronize notes across devices
-- Markdown support for formatting
-- Lightweight and easy to set up
-- Cross-platform compatibility
+- Synchronize notes across devices.
+- Markdown support for formatting.
+- Lightweight and easy to set up.
+- Cross-platform compatibility.
 
 ---
 
@@ -78,7 +78,10 @@ MyNoteSync/
  **Clone the repository**
    ```bash
    git clone https://github.com/faiz-ansari09/myNoteSync
+   ```
+   ```bash
    cd myNoteSync
+   ```
 
 ---
 
@@ -90,4 +93,4 @@ Contributions are welcome! Please open issues or submit pull requests for improv
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://github.com/faiz-ansari09/myNoteSync/blob/main/LICENSE)
