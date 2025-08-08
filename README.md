@@ -79,6 +79,7 @@ MyNoteSync/
    ```bash
    git clone https://github.com/faiz-ansari09/myNoteSync
    ```
+   **Navigate to project folder**
    ```bash
    cd myNoteSync
    ```
